@@ -1,6 +1,7 @@
 <?php
 
 namespace Config;
+use Config\Shorthand;
 
 class Config{
   
@@ -22,35 +23,8 @@ class Config{
  
     if($path) {
 
-      $path = explode('/', $path);
-      $config = V_CONFIG;
-      
-      foreach($path as $bit) {
-
-          if(isset($config[$bit])) {
-
-            /**
-             * Attach a new
-             * config bit.
-             */
-
-            $config = $config[$bit];
-
-          }else{
-
-            /**
-             * When the value is 
-             * not set in the config
-             * file. Return false.
-             */
-
-            return false;
-            
-          }
-
-      }
-      
-      return $config;
+          
+      return Shorthand::get($config, $path);
 
     }
     
