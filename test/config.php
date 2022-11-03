@@ -10,4 +10,4 @@ $config = [
 ];
 
 
-define("CONFIG", $config);
+define("V_CONFIG", $config);
