@@ -7,7 +7,15 @@
 // 4. the config file can be adjusted to your projects needs by adding keys/values/arrays.
 
 $config = [
+  
+  'item' => 'value',
+  'array' => [
+    'item' => 1
+    'banana' => false
+  ]
 ];
 
+// Config::get('item');
+// Config::get('array/banana');
 
 define("V_CONFIG", $config);
