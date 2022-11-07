@@ -20,6 +20,8 @@ class Config{
      * Check if the parent and 
      * child are available..
      */
+
+     $config = V_CONFIG;
  
     if($path) {
 
@@ -31,3 +33,5 @@ class Config{
     return false;
 
   }
+
+}
